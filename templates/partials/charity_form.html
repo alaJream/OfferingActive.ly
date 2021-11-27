@@ -1,0 +1,45 @@
+
+
+<fieldset>
+    <legend>{{ charity.name }}</legend>
+    <div class="d-flex flex-column">
+      <label for='charity_name'>Name of Charity:</label>
+      <input 
+        class="form-control" 
+        type="text" 
+        id="charity_name" 
+        name="charity_name" 
+        value='{{ charity.name }}'
+        required
+        autofocus
+      >
+    </div>
+    <div class="d-flex flex-column">
+      <label for="charity_category">Charity Category:</label>
+      <div class="d-flex justify-content-center align-items-center">
+        <input 
+          class="form-control" 
+          type="text"
+          id="charity_category" 
+          name="charity_category" 
+          value='{{ charity.category }}'
+          required
+        >
+      </div>
+    </div>
+    <div class="d-flex flex-column">
+      <label for="about_charity">About:</label>
+      <textarea 
+        class="form-control" 
+        name="about_charity" 
+        id="about_charity" 
+        cols="30" 
+        rows="4" 
+        required
+      >
+      {{ charity.about }}
+      </textarea>
+    </div>
+  </fieldset>
+  
+  <a style="width: 25%" href="/">Cancel</a>

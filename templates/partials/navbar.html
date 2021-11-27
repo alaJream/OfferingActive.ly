@@ -1,0 +1,23 @@
+
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="container">
+        <p class="navbar-brand p-0 m-0">OfferingActive.ly</p>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbar-links">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-links">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link {{ 'active' if active_page == 'home' else '' }}" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ 'active' if active_page == 'dash' else '' }}" href="/donations/new">Donate</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+  

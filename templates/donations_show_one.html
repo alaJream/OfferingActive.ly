@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h2 class="mb-4">Charity donated to: <a href='/charities/{{ donation.charity_name }}'>{{ donation.charity_name }}</a></h2>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 mt-5">
+      <div class="col-12 col-lg-6">
+        <small>Donation ID: {{ donation._id }}</small>
+        <p>Donation Amount: ${{ donation.donation_amount }}</p>
+        <p>Donation Date: {{ donation.date_donated }}</p>
+        <a href='/donations/{{ donation._id }}/edit' class="btn btn-warning">EDIT</a>
+        <a href='/donations/{{ donation._id }}/delete' class="btn btn-danger">DELETE</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

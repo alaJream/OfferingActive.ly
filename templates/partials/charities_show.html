@@ -1,0 +1,13 @@
+{% for charity in charities %}
+<div class="col-6 col-sm-3 square mb-4">
+  <a href="/charities/{{ charity.name }}" class="text-decoration-none text-dark">
+    <div class="card shadow-sm rounded bg-light">
+      <img src="https://quilterscornerva.com/wp-content/uploads/woocommerce-placeholder-457x457.jpg" alt="{{ charity.name }}">
+      <div class="overlay">
+        <small class="text">{{ charity.name }}</small>
+      </div>
+      <small><strong>{{ charity.name }}</small></strong>
+    </div>
+  </a>
+</div>
+{% endfor %}

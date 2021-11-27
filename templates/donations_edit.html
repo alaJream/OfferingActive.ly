@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container d-flex flex-column justify-content-center align-items-center " style="height: 90vh;">
+    <div class="card rounded bg-light p-3" style="width: 25rem; height: 27rem;">
+      <div class="card-body d-flex flex-column justify-content-around">
+        <form action="/donations/{{donation._id}}" method="POST" class="d-flex flex-column justify-content-around" style="height: 100%">
+
+          <input type="hidden" name='_method' value='PUT'/>
+          {% include 'partials/donations_form.html' %}
+          <div class="form-group align-self-center">
+            <button type="submit" class="btn btn-info ">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

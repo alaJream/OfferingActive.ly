@@ -1,0 +1,48 @@
+<fieldset>
+    <legend>{{ title }}</legend>
+    <div class="d-flex flex-column">
+      <label for='charity_name'>Name of charity:</label>
+      <input 
+        class="form-control" 
+        type="text" 
+        list='charity_name'
+        name="charity_name" 
+        value='{{ donation.charity_name }}'
+        required
+        autofocus
+      >
+      <datalist id="charity_name">
+        {% for charity in charities %}
+        <option value='{{ charity.name }}'>{{ charity.name }}</option>
+        {% endfor %}
+      </datalist>
+    </div>
+  
+    <div class="d-flex flex-column">
+      <label for="donation_amount">Donation amount:</label>
+      <div class="d-flex justify-content-center">
+        <input 
+        class="form-control" 
+        style="border-bottom-left-radius: 0; border-top-left-radius: 0;" 
+        type="number" 
+        id="donation_amount" 
+        name="donation_amount" 
+        value='{{ donation.donation_amount }}'
+        required
+        >
+      </div>
+    </div>
+    <div class="d-flex flex-column">
+      <label for="date_donated">Date donated:</label>
+      <input 
+        class="form-control" 
+        type="date" 
+        id="date_donated" 
+        name="date_donated" 
+        value='{{ donation.date_donated }}'
+        required
+      >
+    </div>
+  </fieldset>
+  
+  <a style="width: 25%" href="/">Cancel</a>
