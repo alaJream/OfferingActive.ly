@@ -5,7 +5,7 @@ import os
 
 host = os.environ.get("DB_URL")
 client = MongoClient(host=host)
-db = client.CharityTracker
+db = client.get_default_database()
 donations = db.donations
 charities = db.charities
 
