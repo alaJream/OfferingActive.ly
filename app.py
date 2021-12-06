@@ -9,7 +9,7 @@ db = client.CharityTracker
 donations = db.donations
 charities = db.charities
 
-app = Flask(__name__)
+
 app = Flask(__name__)
 
 # get info hompage donations from index
