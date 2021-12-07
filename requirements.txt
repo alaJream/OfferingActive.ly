@@ -15,6 +15,7 @@ platformdirs==2.4.0
 pygame==2.1.0
 pymongo==4.0
 python-dateutil==2.8.2
+python-dotenv==0.19.2
 requests==2.26.0
 six==1.15.0
 style==1.1.0
